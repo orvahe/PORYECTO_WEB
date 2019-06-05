@@ -3,7 +3,7 @@ const app = express();
 const {controller} = require("./Controller");
 
 app.get("/", (req, res)=>{
-    res.send("bienvenido a tu app de asesoria");
+    res.send("Bienvenido a tu App de asesoria");
 
 })
 
