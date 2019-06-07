@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const {controller} = require("./Controller");
+const bodyParser = require("body-parser");
+
+app.use( bodyParser.json());
 
 app.get("/", (req, res)=>{
     res.send("Bienvenido a tu App de asesoria");
@@ -44,6 +47,11 @@ app.get("/celulares", (req, res) => {
   res.send(celulares);
 });;*/
   controller.getUsers(res);
+})
+app.post("/users", (req, res)=>{
+    //console.log(req.body);
+    controller.postUsers(req, res);
+    //res.send('OK')
 })
 
 exports.app = app;
