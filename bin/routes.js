@@ -51,7 +51,7 @@ app.get("/celulares", (req, res) => {
 app.post("/users", (req, res)=>{
     //console.log(req.body);
     controller.postUsers(req, res);
-    //res.send('OK')
+    res.send('OK')
 })
 
 exports.app = app;
