@@ -11,7 +11,7 @@ class Controller{
                  "mongodb+srv://orvahe10:3107462775(luz)@cluster0-qqaba.mongodb.net/OCUBIC_3DB?retryWrites=true&w=majority",
                  {useNewUrlParser:true}
              );
-             console.log("Conectado a la base de Datos!!!")
+             console.log("Conectado a la base de Datos!!")
 
          } catch(e){
              console.error(e)
