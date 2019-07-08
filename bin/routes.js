@@ -52,6 +52,12 @@ app.post("/users", (req, res)=>{
     //console.log(req.body);
     controller.postUsers(req, res);
     res.send('OK')
+
+})
+
+app.get("/gamas/celulares/:marca/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
 })
 
 exports.app = app;
