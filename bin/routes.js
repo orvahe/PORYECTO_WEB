@@ -87,5 +87,22 @@ app.get("/Usuario/1233343351/",(req, res)=>{
     console.log(req.params)
     res.send("ok");
 })
+app.get("/Usuario/preferencias/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+app.get("/App/Gamas/Vel_Procesadores/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+app.get("/Gamas/pc/Samsung/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+app.get("/Gamas/celular/Marcas/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+
 
 exports.app = app;
