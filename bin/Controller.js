@@ -30,10 +30,10 @@ class Controller{
     }
 
      getGamas(res){
-             Gamas.find({}, (err, Gamas)=>{
+             Gamas.find({}, (err, gamas)=>{
                  if(err) throw err;
 
-                 res.send( Gamas);
+                 res.send( gamas);
 
              } )
 
@@ -47,10 +47,10 @@ class Controller{
     }
 
      postGamas(req, res){
-        let Gamas = req.body.Gamas;
-        User.create( users, (err, result)=>{
+        let gamas = req.body.gamas;
+        Gamas.create( gamas, (err, result)=>{
             if(err)throw err;
-            res.send({newUser:result})
+            res.send({newGamas:result})
         })
     }
 
