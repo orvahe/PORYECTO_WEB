@@ -55,7 +55,7 @@ app.post("/users", (req, res)=>{
 
 })
 
-app.get("/gamas/celulares/:marca/",(req, res)=>{
+app.get("/gamas/celulares/:marca",(req, res)=>{
     console.log(req.params)
     res.send("ok");
 })
