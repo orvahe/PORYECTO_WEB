@@ -48,9 +48,20 @@ app.get("/celulares", (req, res) => {
 });;*/
   controller.getUsers(res);
 })
-app.post("/usuarios", (req, res)=>{
+
+app.get("/Gamas", (req, res) => {
+  controller.getGamas(res);
+})
+
+app.post("/Users", (req, res)=>{
     //console.log(req.body);
     controller.postUsers(req, res);
+    res.send('OK')
+
+})
+app.post("/Gamas", (req, res)=>{
+    //console.log(req.body);
+    controller.postGamas(req, res);
     res.send('OK')
 
 })

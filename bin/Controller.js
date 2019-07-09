@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const User = require("./models/User");
+const Gamas = require("./models/Gamas");
 class Controller{
     constructor(){
         this.connect();
@@ -27,8 +28,26 @@ class Controller{
              } )
 
     }
+
+     getGamas(res){
+             Gamas.find({}, (err, Gamas)=>{
+                 if(err) throw err;
+
+                 res.send( Gamas);
+
+             } )
+
+    }
     postUsers(req, res){
         let users = req.body.users;
+        User.create( users, (err, result)=>{
+            if(err)throw err;
+            res.send({newUser:result})
+        })
+    }
+
+     postGamas(req, res){
+        let Gamas = req.body.Gamas;
         User.create( users, (err, result)=>{
             if(err)throw err;
             res.send({newUser:result})
