@@ -70,12 +70,19 @@ app.get("/gamas/celulares/:marca",(req, res)=>{
     console.log(req.params)
     res.send("ok");
 })
+
+
 app.get("/gamas/pc/precio/",(req, res)=>{
     console.log(req.params)
     res.send("ok");
 })
 
 app.get("/App/Gamas/Vel_procesador/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+
+app.get("/usuarios/:ID",(req, res)=>{
     console.log(req.params)
     res.send("ok");
 })
