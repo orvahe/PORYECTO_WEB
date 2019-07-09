@@ -48,7 +48,7 @@ app.get("/celulares", (req, res) => {
 });;*/
   controller.getUsers(res);
 })
-app.post("/users", (req, res)=>{
+app.post("/usuarios", (req, res)=>{
     //console.log(req.body);
     controller.postUsers(req, res);
     res.send('OK')
@@ -56,6 +56,23 @@ app.post("/users", (req, res)=>{
 })
 
 app.get("/gamas/celulares/:marca",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+app.get("/gamas/pc/precio/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+
+app.get("/App/Gamas/Vel_procesador/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+app.get("/usuario/preferencias/2k/",(req, res)=>{
+    console.log(req.params)
+    res.send("ok");
+})
+app.get("/Usuario/1233343351/",(req, res)=>{
     console.log(req.params)
     res.send("ok");
 })
