@@ -42,6 +42,17 @@ class Controller{
 
     }
 
+     getCelulares(res){
+            Celulares.find({}, (err, celulares)=>{
+                 if(err) throw err;
+
+                 res.send( celulares);
+
+             } )
+
+    }
+
+
      getGamas(res){
              Gamas.find({}, (err, gamas)=>{
                  if(err) throw err;
@@ -77,6 +88,15 @@ class Controller{
         User.create( users, (err, result)=>{
             if(err)throw err;
             res.send({newUser:result})
+        })
+    }
+
+
+    postCelularess(req, res){
+        let celulares = req.body.celulares;
+        Celulares.create( celulares, (err, result)=>{
+            if(err)throw err;
+            res.send({newCelulares:result})
         })
     }
 

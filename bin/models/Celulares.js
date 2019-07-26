@@ -13,7 +13,9 @@ const CelularesSchema = new Schema(
     almacenamiento: String,
     ditribuidor: String,
     bateria: String,
-
+    tamaño: String,
+    peso: String,
+    tipo_de_flash: String
 
 
 });

@@ -14,6 +14,10 @@ app.get("/users", (req, res) => {
 
   controller.getUsers(res);
 })
+app.get("/celulares", (req, res) => {
+
+  controller.getCelulares(res);
+})
 
 app.get("/Gamas", (req, res) => {
   controller.getGamas(res);
@@ -26,13 +30,20 @@ app.get("/Preferencias", (req, res) => {
 app.get("/Pcs", (req, res) => {
   controller.getPcs(res);
 })
-
+////////////////////////////////////////////////
 app.post("/Users", (req, res)=>{
     //console.log(req.body);
     controller.postUsers(req, res);
     res.send('OK')
 
 })
+app.post("/Celulares", (req, res)=>{
+    //console.log(req.body);
+    controller.postCelulares(req, res);
+    res.send('OK')
+
+})
+
 app.post("/Pcs", (req, res)=>{
     //console.log(req.body);
     controller.postPcs(req, res);
