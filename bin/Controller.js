@@ -3,6 +3,7 @@ const User = require("./models/User");
 const Gamas = require("./models/Gamas");
 const Preferencias = require("./models/Preferencias");
 const Pcs = require("./models/Pcs");
+const Celulares = require("./models/Celulares");
 class Controller{
     constructor(){
         this.connect();
