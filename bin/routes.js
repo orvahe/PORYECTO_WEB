@@ -19,15 +19,37 @@ app.get("/Gamas", (req, res) => {
   controller.getGamas(res);
 })
 
+app.get("/Preferencias", (req, res) => {
+  controller.getPreferencias(res);
+})
+
+app.get("/Pcs", (req, res) => {
+  controller.getPcs(res);
+})
+
 app.post("/Users", (req, res)=>{
     //console.log(req.body);
     controller.postUsers(req, res);
     res.send('OK')
 
 })
+app.post("/Pcs", (req, res)=>{
+    //console.log(req.body);
+    controller.postPcs(req, res);
+    res.send('OK')
+
+})
+
 app.post("/Gamas", (req, res)=>{
     //console.log(req.body);
     controller.postGamas(req, res);
+    res.send('OK')
+
+})
+
+app.post("/Preferencias", (req, res)=>{
+    //console.log(req.body);
+    controller.postPreferencias(req, res);
     res.send('OK')
 
 })

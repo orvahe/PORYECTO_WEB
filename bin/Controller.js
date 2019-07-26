@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const User = require("./models/User");
 const Gamas = require("./models/Gamas");
+const Preferencias = require("./models/Preferencias");
+const Pcs = require("./models/Pcs");
 class Controller{
     constructor(){
         this.connect();
@@ -29,6 +31,16 @@ class Controller{
 
     }
 
+     getPcs(res){
+             Pcs.find({}, (err, pcs)=>{
+                 if(err) throw err;
+
+                 res.send( pcs);
+
+             } )
+
+    }
+
      getGamas(res){
              Gamas.find({}, (err, gamas)=>{
                  if(err) throw err;
@@ -38,11 +50,48 @@ class Controller{
              } )
 
     }
+
+ getPreferencias(res){
+             Preferencias.find({}, (err, preferencias)=>{
+                 if(err) throw err;
+
+                 res.send( preferencias);
+
+             } )
+
+    }
+
+     getPcs(res){
+             Pcs.find({}, (err, pcs)=>{
+                 if(err) throw err;
+
+                 res.send( pcs);
+
+             } )
+
+    }
+
     postUsers(req, res){
         let users = req.body.users;
         User.create( users, (err, result)=>{
             if(err)throw err;
             res.send({newUser:result})
+        })
+    }
+
+    postPcs(req, res){
+        let pcs = req.body.pcs;
+        Pcs.create( pcs, (err, result)=>{
+            if(err)throw err;
+            res.send({newPcs:result})
+        })
+    }
+
+    postPreferencias(req, res){
+        let preferencias = req.body.preferencias;
+        Preferencias.create( preferencias, (err, result)=>{
+            if(err)throw err;
+            res.send({newPreferencias:result})
         })
     }
 
