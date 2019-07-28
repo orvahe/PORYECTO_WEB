@@ -14,7 +14,12 @@ app.get("/users", (req, res) => {
 
   controller.getUsers(res);
 })
-app.get("/celulares", (req, res) => {
+
+app.get("/Usuarios", (req, res) => {
+
+  controller.getUsuarios(res);
+})
+app.get("/Celulares", (req, res) => {
 
   controller.getCelulares(res);
 })
@@ -37,6 +42,13 @@ app.post("/Users", (req, res)=>{
     res.send('OK')
 
 })
+app.post("/Usuarios", (req, res)=>{
+    //console.log(req.body);
+    controller.postUsuarios(req, res);
+    res.send('OK')
+
+})
+
 app.post("/Celulares", (req, res)=>{
     //console.log(req.body);
     controller.postCelulares(req, res);

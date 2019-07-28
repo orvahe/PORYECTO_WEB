@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const CelularesSchema = new Schema(
     {
-    id: String,
     nombre: String,
     precio: String,
     pantalla: String,
@@ -19,5 +18,5 @@ const CelularesSchema = new Schema(
 
 
 });
-var Celulares = mongoose.model("Celularess", CelularesSchema);
+var Celulares = mongoose.model("Celulares", CelularesSchema);
 module.exports = Celulares;

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const User = require("./models/User");
+const Usuarios = require("./models/Usuarios");
 const Gamas = require("./models/Gamas");
 const Preferencias = require("./models/Preferencias");
 const Pcs = require("./models/Pcs");
@@ -27,6 +28,16 @@ class Controller{
                  if(err) throw err;
 
                  res.send( users);
+
+             } )
+
+    }
+
+ getUsuarios(res){
+             Usuarios.find({}, (err, usuarios)=>{
+                 if(err) throw err;
+
+                 res.send( usuarios);
 
              } )
 
@@ -91,6 +102,13 @@ class Controller{
         })
     }
 
+postUsuarios(req, res){
+        let usuarios = req.body.usuarios;
+        Usuarios.create( usuarios, (err, result)=>{
+            if(err)throw err;
+            res.send({newUsuarios:result})
+        })
+    }
 
     postCelularess(req, res){
         let celulares = req.body.celulares;
