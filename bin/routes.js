@@ -10,6 +10,17 @@ app.get("/", (req, res)=>{
 
 })
 
+app.put("/usuarios/:id", function(req, res) {
+    let usuarios = req.body.usuarios;
+    usuarios.id = req.params.id;
+    controller.updateUsuarios(usuarios, res);
+});
+
+app.post("/usuarios", function(req, res) {
+    let { usuarios } = req.body;
+    controller.setUsuarios(usuarios, res);
+});
+
 app.get("/users", (req, res) => {
 
   controller.getUsers(res);
