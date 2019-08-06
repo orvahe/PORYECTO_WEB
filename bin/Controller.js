@@ -62,6 +62,24 @@ class Controller{
         });
     }
 
+     getUsuarios(id, res) {
+        //en el modelo User se ejecuta el find sin ninguna condicion...
+        Usuarios.find({ _id: id }, (err, usuarios) => {
+            //en caso de haberse presentado un error se ejecuta el error
+            if (err) throw err;
+            //de lo contrario se retorna un objeto con todos los resultados
+            res.send({ Usuarios: usuarios });
+        });
+    }
+
+    deleteUsuarios(id, res) {
+        Usuarios.deleteOne({ _id: id }, function(err) {
+            if (err) throw err;
+            res.send({ message: "User has been deleted" });
+        });
+    } // remove, findByIdAndRemove, findOneAndRemove
+
+
 
          getUsers(res){
              User.find({}, (err, users)=>{

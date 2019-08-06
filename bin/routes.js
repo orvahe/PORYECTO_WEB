@@ -21,10 +21,21 @@ app.post("/usuarios", function(req, res) {
     controller.setUsuarios(usuarios, res);
 });
 
+app.get("/usuarios/:id", function(req, res) {
+    let { id } = req.params;
+    controller.getUsuarios(id, res);
+});
+
+
 app.get("/users", (req, res) => {
 
   controller.getUsers(res);
 })
+
+app.delete("/usuarios/:id", function(req, res) {
+    let { id } = req.params;
+    controller.deleteUsuarios(id, res);
+});
 
 app.get("/Usuarios", (req, res) => {
 
