@@ -62,7 +62,7 @@ class Controller{
         });
     }
 
-     getUsuarios(id, res) {
+     getUsuario(id, res) {
         //en el modelo User se ejecuta el find sin ninguna condicion...
         Usuarios.find({ _id: id }, (err, usuarios) => {
             //en caso de haberse presentado un error se ejecuta el error

@@ -23,7 +23,7 @@ app.post("/usuarios", function(req, res) {
 
 app.get("/usuarios/:id", function(req, res) {
     let { id } = req.params;
-    controller.getUsuarios(id, res);
+    controller.getUsuario(id, res);
 });
 
 
