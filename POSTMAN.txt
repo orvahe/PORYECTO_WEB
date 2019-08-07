@@ -1,0 +1,16 @@
+RUTAS
+
+muestra la lista de usuarios en la base
+post: /usuarios
+
+muestra las preferencias mas comunes en cada usuario
+post: /preferencias
+
+muestra los que hace a un celular o pc que se de gama alta o baja
+post: /gamas
+
+muestra catalogo de celulares y especificaciones
+post: /celulares
+
+muestra catalogos de pcs y especificaciones
+port: /pcs
